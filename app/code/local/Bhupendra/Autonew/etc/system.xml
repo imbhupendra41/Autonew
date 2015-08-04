@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+		Bhupendra_autonew_config- Any name can be (It link in section TAB handle)
+		Bhupendra_autonew_options - Any name can be (It link in config.xml)
+-->
+<config>
+    <tabs>
+        <Bhupendra_autonew_config translate="label" module="autonew">
+            <label>Bhupedra</label>
+            <sort_order>99999</sort_order>
+        </Bhupendra_autonew_config>
+    </tabs> 
+    <sections>
+        <Bhupendra_autonew_options translate="label" module="autonew">
+            <label>Automatic Configuration</label>
+            <tab>Bhupendra_autonew_config</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>  
+			<groups>
+                <configgroup translate="label">
+                    <label>New Product Configuration</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>      
+					<fields>
+						<bhupendra_autonew_enable>
+							<label>Enable</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>0</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>                    
+						</bhupendra_autonew_enable>
+						<bhupendra_autonew_days>
+							<label>Enter Days</label>
+							<comment>Number of day after new product end</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>                    
+						</bhupendra_autonew_days>
+						<bhupendra_autonew_metatemplate>
+							<label>Enter Your template</label>
+							<frontend_type>textarea</frontend_type>
+							<sort_order>2</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>          
+							<comment>You can use {{product_name}} and {{price}} variable inside the creation of template</comment>
+						</bhupendra_autonew_metatemplate>
+					</fields>      					
+                </configgroup>
+            </groups>	
+		</Bhupendra_autonew_options>
+    </sections>     
+</config>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>Bhupendra_Automatic</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license>Open Software License (OSL)</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>This module allow you automatically assign the product as new product when it is newly created one. It allow provide the template allow you to set  all meta description with specific template by using {{product name}} and {{price}} </summary>
+    <description>This module allow you automatically assign the product as new product when it is newly created one. It allow provide the template allow you to set  all meta description with specific template by using {{product name}} and {{price}} </description>
+    <notes>This module allow you automatically assign the product as new product when it is newly created one. It allow provide the template allow you to set  all meta description with specific template by using {{product name}} and {{price}} </notes>
+    <authors><author><name>Bhupendra</name><user>Bhupendra</user><email>Bhupendrajadeja41@gmail.com</email></author></authors>
+    <date>2015-08-04</date>
+    <time>07:22:13</time>
+    <contents><target name="magelocal"><dir name="Bhupendra"><dir name="Autonew"><dir name="Helper"><file name="Data.php" hash="f2f8621a58a697ebbbda99357359a596"/></dir><dir name="Model"><file name="Observer.php" hash="af68080f5ba95969dc05f1f8a61d7cf1"/></dir><dir name="controllers"><file name="IndexController.php" hash="0dea9c3d6c0bd213ff6e537dcc236fd4"/></dir><dir name="etc"><file name="config.xml" hash="3f05d46f38d2978d08bf0c0d1eb75c10"/><file name="system.xml" hash="c1981b13292a6a12431043f786bad2d3"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Bhupendra_Autonew.xml" hash="fd19f3988f2473f8d355680aa50c4096"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

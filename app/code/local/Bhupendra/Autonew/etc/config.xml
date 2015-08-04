@@ -1,0 +1,82 @@
+<?xml version="1.0" ?>
+<config>
+		<modules>
+			<Bhupendra_Autonew>
+				<version>1.0.0</version>
+			</Bhupendra_Autonew>
+		</modules>
+		<frontend>
+			<routers>
+					<autonew>
+							<use>standard</use>
+							<args>
+								<module>Bhupendra_Autonew</module>
+								<frontName>autonew</frontName>
+							</args>
+					</autonew>
+			</routers>
+		</frontend>
+		<global>
+			<blocks>
+					<autonew>
+						<class>Bhupendra_Autonew_Block</class>
+					</autonew>
+			</blocks>
+			<helpers>
+					<autonew>
+						<class>Bhupendra_Autonew_Helper</class>
+					</autonew>
+			</helpers>
+			<models>
+					<autonew>
+						<class>Bhupendra_Autonew_Model</class>
+					</autonew>
+			</models>
+		</global>
+		 <adminhtml>
+		   <acl>
+        <resources>
+					<all>
+						<title>Bhupendra</title>
+					</all>
+					<admin>
+						<children>
+							<system>
+								<children>
+									<config>
+										<children>
+											<Bhupendra_autonew_options>
+												<title>Bhupendra</title>
+											</Bhupendra_autonew_options>
+										</children>
+									</config>
+								</children>
+							</system>
+						</children>
+					</admin>
+				</resources>
+			</acl>
+			<events>
+				 <catalog_product_save_before><!-- observe the event -->
+					<observers>
+						<bhupendra_autonew>
+							<class>Bhupendra_Autonew_Model_Observer</class>
+							<method>autoSave</method>
+						</bhupendra_autonew>
+					</observers>
+				 </catalog_product_save_before>
+				<!-- admin_system_config_changed_section_[sectionname] -->
+				<admin_system_config_changed_section_Bhupendra_autonew_options>
+					<observers>
+						<modulename>
+							<type>singleton</type>
+							<class>Bhupendra_Autonew_Model_Observer</class>
+							<method>autoMetaSave</method>
+						</modulename>
+					</observers>
+				</admin_system_config_changed_section_Bhupendra_autonew_options>
+			</events>
+    </adminhtml>
+</config>
+
+

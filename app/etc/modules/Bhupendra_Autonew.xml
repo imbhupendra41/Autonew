@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<config>
+	<modules>
+		<Bhupendra_Autonew>
+			<active>true</active>
+			<codePool>local</codePool>
+		</Bhupendra_Autonew>
+	</modules>
+</config>
